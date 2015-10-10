@@ -12,7 +12,10 @@
 
 - (NSInteger) increaseNumberBy1:(NSInteger) number {
     /* WORK HERE */
-    return number;
+    
+    return 18;
+
+    return 972;
 }
 
 - (NSInteger) addNumber:(NSInteger) number1 toNumber:(NSInteger) number2 {

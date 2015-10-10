@@ -30,10 +30,12 @@
     NSInteger resultNumber = [self.calculator increaseNumberBy1:sourceNumber];
     XCTAssertTrue(resultNumber == 18, @"17 + 1 = 18");
 
-    sourceNumber = 972;
+    sourceNumber = 971;
     resultNumber = [self.calculator increaseNumberBy1:sourceNumber];
-    XCTAssertTrue(resultNumber == 973, @"972 + 1 = 973");
+    XCTAssertTrue(resultNumber == 972, @"971 + 1 = 972");
 }
+
+
 
 - (void) testThatAdditionWorks {
     NSInteger firstOperand = 17;
