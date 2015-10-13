@@ -11,34 +11,54 @@
 @implementation StringCheese
 
 - (NSString *) favoriteCheeseStringWithCheese:(NSString *)cheeseName {
-    /* WORK HERE */
-    return nil;
+   
+//    NSString *cheese = @"My favorite cheese is ";
+//    NSString *favoriteCheese = [cheese stringByAppendingString: cheeseName];
+//    favoriteCheese = [favoriteCheese stringByAppendingString:@"."];
+    
+    NSString *favoriteCheese = [NSString stringWithFormat:@"My favorite cheese is %@.", cheeseName];
+    
+    //how does it know the cheese name?
+    
+    return favoriteCheese;
+
+
 }
 
 - (NSString *) cheeseNameWithoutCheeseSuffix:(NSString *)cheeseName {
-    if ([[cheeseName lowercaseString] hasSuffix:@" cheese"]) {
-        /* WORK HERE, ASSUMING `cheeseName` ENDS WITH " cheese" */
-    } else {
-        /* WORK HERE, ASSUMING `cheeseName` DOES NOT END WITH " cheese" */
-    }
+    
+//    NSString *lowercaseCheese = [cheeseName lowercaseString];
+//    
+//    
+////    if ([lowercaseCheese hasSuffix:@" cheese"]) {
+////        
+////        NSRange cheeseRange = [lowercaseCheese rangeOfString:@" cheese" options: NSBackwardsSearch];
+////        
+////        return [cheeseName stringByReplacingCharactersInRange:cheeseRange withString:@""];
+////        //does this mean I'm getting rid of the space cheese?
+////    }
+    
+    
+    NSString *result= [cheeseName stringByReplacingOccurrencesOfString:@" cheese" withString:@"" options:NSCaseInsensitiveSearch range:NSMakeRange(0, cheeseName.length)];
+    
 
-    /*
-     (You will learn more about if/else statements in a later checkpoint.)
-     */
-
-    return nil;
+    return result;
 }
 
 - (NSString *) numberOfCheesesStringWithCheeseCount:(NSUInteger)cheeseCount {
+    
     if (cheeseCount == 1) {
+        
+        return [@(cheeseCount).description stringByAppendingString:@" cheese"];
+        
         /* WORK HERE, ASSUMING THERE IS 1 CHEESE */
     } else {
+        
+            return [@(cheeseCount).description stringByAppendingString:@" cheeses"];
+        
         /* WORK HERE, ASSUMING THERE ARE 2+ CHEESES */
     }
     
-    /*
-     (You will learn more about if/else statements in a later checkpoint.)
-     */
     
     return nil;
 }
