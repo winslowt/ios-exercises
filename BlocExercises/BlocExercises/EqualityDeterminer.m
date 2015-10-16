@@ -28,8 +28,8 @@
 - (BOOL) integer:(NSInteger)integer1 isGreaterThan:(NSInteger)integer2 {
     /* WORK HERE */
     
-    NSLog(@"Is 7 greater than 4? %@", integer1 > integer2 ? @"Yes" : @"No");
-    NSLog(@"Is 7 less than 4? %@", integer1 < integer2 ? @"Yes" : @"No");
+    ///////please work
+
 
     
     return integer1 > integer2;
