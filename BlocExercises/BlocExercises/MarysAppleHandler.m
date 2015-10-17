@@ -34,10 +34,7 @@
     
     NSUInteger cost = 24;
     
-    
-    NSString *message = (self.getsDiscount) ? @"cost *=.75" : @"24";
-
-    NSLog(@"%@", message);
+  cost = self.getsDiscount ? cost * 0.75 : cost;
     
     return cost;
    
